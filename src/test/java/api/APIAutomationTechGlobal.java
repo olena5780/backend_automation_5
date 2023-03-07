@@ -14,7 +14,6 @@ public class APIAutomationTechGlobal {
         response = RestAssured
                 .given().log().all()
                 .header("Content-Type", "application/json")
-                .header("Authorization", "Bearer e00e5579f7601d1ea38d6caf977bf08d9e6100b2f61974d9ede925e8814aa3b6")
                 .body("{\n" +
                         "    \"firstName\": \"" + faker.name().firstName() + "\",\n" +
                         "    \"lastName\": \"" + faker.name().lastName() + "\",\n" +
@@ -35,7 +34,6 @@ public class APIAutomationTechGlobal {
         response =  RestAssured
                 .given().log().all()
                 .header("Content-Type", "application/json")
-                .header("Authorization", "Bearer e00e5579f7601d1ea38d6caf977bf08d9e6100b2f61974d9ede925e8814aa3b6")
                 .when().get("https://tech-global-training.com/students/"+ postId)
                 .then().log().all().extract().response();
 
@@ -45,7 +43,6 @@ public class APIAutomationTechGlobal {
         response =  RestAssured
                 .given().log().all()
                 .header("Content-Type", "application/json")
-                .header("Authorization", "Bearer e00e5579f7601d1ea38d6caf977bf08d9e6100b2f61974d9ede925e8814aa3b6")
                 .when().get("https://tech-global-training.com/students")
                 .then().log().all().extract().response();
 
@@ -55,7 +52,6 @@ public class APIAutomationTechGlobal {
         response = RestAssured
                 .given().log().all()
                 .header("Content-Type", "application/json")
-                .header("Authorization", "Bearer e00e5579f7601d1ea38d6caf977bf08d9e6100b2f61974d9ede925e8814aa3b6")
                 .body("{\n" +
                         "    \"firstName\": \"" + faker.name().firstName() + "\",\n" +
                         "    \"lastName\": \"" + faker.name().lastName() + "\",\n" +
@@ -70,7 +66,6 @@ public class APIAutomationTechGlobal {
         response = RestAssured
                 .given().log().all()
                 .header("Content-Type", "application/json")
-                .header("Authorization", "Bearer e00e5579f7601d1ea38d6caf977bf08d9e6100b2f61974d9ede925e8814aa3b6")
                 .body("{\n" +
                         "    \"firstName\": \"" + faker.name().firstName() + "\",\n" +
                         "    \"lastName\": \"" + faker.name().lastName() + "\",\n" +
@@ -88,7 +83,6 @@ public class APIAutomationTechGlobal {
         response = RestAssured
                 .given().log().all()
                 .header("Content-Type", "application/json")
-                .header("Authorization", "Bearer e00e5579f7601d1ea38d6caf977bf08d9e6100b2f61974d9ede925e8814aa3b6")
                 .when().delete("https://tech-global-training.com/students/" + postId)
                 .then().log().all().extract().response();
 
